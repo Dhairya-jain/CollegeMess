@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+           <h2>FACULTY LOGIN</h2> 
+            <fieldset class="form-group">
+                <label for="username">USERNAME</label>
+                <input id="username" type="username" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+                <label id="password">Password</label>
+                <input type="password" id="password1" class="form-control">
+            </fieldset>
+            <fieldset class="form-group">
+
+                <button onclick="function_match()" type="button" class="btn btn-primary">Submit</button>
+                <button onclick="location.href ='Home.html'" type="button" class="btn btn-primary">Cancel</button>
+
+            </fieldset>
+
+        </form>
+    </div>
+ <script>
+        function function_match() {
+           
+        if((document.getElementById("username").value == "Dhairya") && (document.getElementById("password1").value == "djain"))  
+        {
+            
+           alert("data saved succesfully");
+        }
+        
+        else{
+            alert("credentials unmatch");
+        }
+        }
+        </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

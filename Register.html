@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+
+
+    <div class="container" onsubmit="submitValues(form1);"
+        <form name="form1" id="details" action="Details.html">
+            <h2>Registration</h2>
+            <div class="field">
+                <label for="name">NAME</label>
+                <input id="name" type="text" class="form-control">
+            </div>
+            <div class="field">
+                <label for="contact">CONTACT NO:</label>
+                <input id="con" type="text" class="form-control">
+            </div>
+            <div class="field">
+                <label for="address">ADDRESS:</label>
+                <input id="address" type="text" class="form-control">
+            </div>
+            <div class="field">
+                <label for="username">USERNAME</label>
+                <input id="username" type="text" class="form-control">
+            </div>
+            <div class="field">
+                <label id="pswrd">PASSWORD</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+            <div class="field">
+                <legend>Qualification:</legend>
+            </div>
+            <div class="field">Graduation:
+                <select class="dropdown">
+                    <option>BCA</option>
+                    <option>BBA</option>
+                    <option>BCOM</option>
+                    <option>BA</option>
+
+                </select>
+                <br>
+            </div>
+            <div class="field"> Post Graduation:
+                <select>
+                    <option>MCA</option>
+                    <option>MBA</option>
+                    <option>MCOM</option>
+                    <option>MA</option>
+
+                </select>
+                <br>
+            </div>
+            <div id="result"></div>
+
+
+
+
+            <div class="field">
+                <button onClick="testJS()" id="btn1" class="btn btn-success">Submit</button>
+
+                <button onclick="location.href ='Home.html'" type="button" class="btn btn-outline-danger">Cancel</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+        function testJS() {
+            var formData = {
+                name: document.getElementById("name").value,
+                contact: document.getElementById("con").value,
+                address: document.getElementById("address").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            }
+
+            /* document.getElementById("feild").innerHTML =
+formData.name + " is " + formData.contact+ " years old."; */
+            localStorage.setItem("myobject", JSON.stringify(formData));
+
+            location.href = "Details.html";
+        }
+    </script>
+
+    <!--  /*   <script>
+var person = {
+    firstname:"John",
+    lastname:"Doe",
+    age:50,
+    eyecolor:"blue"
+};
+document.getElementById("demo").innerHTML =
+person.firstname + " is " + person.age + " years old.";
+</script>
+
+ */ -->
+    <!-- 
+            // var myObject = new formData();
+
+
+            // myObject.name = document.getElementById("name").value;
+            // myObject.address = document.getElementById("address").value;
+            // myObject.username = document.getElementById("username").value;
+            // myObject.password = document.getElementById("password").value; -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
